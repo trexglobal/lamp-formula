@@ -12,11 +12,27 @@ To setup LAMP server.
 ## Install
 
 1. Add remotes to /etc/salt/master
-```yaml
-gitfs_remotes:
-  - git://github.com/trexglobal/lamp-formula
-  - git://github.com/trexglobal/apache-formula
-  - git://github.com/trexglobal/mysql-formula
-  - git://github.com/trexglobal/php-formula
-```
+
+  ```yaml
+  gitfs_remotes:
+    - git://github.com/trexglobal/lamp-formula
+    - git://github.com/trexglobal/apache-formula
+    - git://github.com/trexglobal/mysql-formula
+    - git://github.com/trexglobal/php-formula
+  ```
+
 2. Setup [pillar](http://docs.saltstack.com/en/latest/topics/pillar/) from pillar.example
+3. Add lamp to your server state file
+
+  ```yaml
+  include:
+      - lamp
+  ```
+
+  or to the top.sls file
+
+  ```yaml
+  base:
+    'wordpress.blog.example.com':
+      - lamp
+  ```
