@@ -22,14 +22,14 @@ To setup LAMP server.
   ```
 
 2. Setup [pillar](http://docs.saltstack.com/en/latest/topics/pillar/) from pillar.example
-3. Add lamp to your server state file
+3. Add lamp to your server [state file](http://docs.saltstack.com/en/latest/topics/tutorials/starting_states.html)
 
   ```yaml
   include:
       - lamp
   ```
 
-  or to the top.sls file
+  or to the [top.sls](http://docs.saltstack.com/en/latest/ref/states/top.html) file
 
   ```yaml
   base:
