@@ -6,5 +6,6 @@
 include:
     - apache
     - mysql.server
+    - .mysql
     - php
     - php.mysql

@@ -1,0 +1,8 @@
+check process mysql with pidfile /var/run/mysqld/mysqld.pid
+  group database
+  start program = "/sbin/start mysql"
+  stop program = "/sbin/stop mysql"
+  if cpu usage > 50% for 16 cycles then restart
+  if cpu usage > 80% for 3 cycles then restart
+  if failed host localhost port 3306 protocol mysql then restart
+  if 5 restarts within 5 cycles then timeout
