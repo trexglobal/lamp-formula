@@ -5,6 +5,7 @@
 
 include:
     - apache
+    - apache.rewrite
     - mysql.server
     - .mysql
     - php

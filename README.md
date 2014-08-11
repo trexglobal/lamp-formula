@@ -15,6 +15,7 @@ To setup LAMP server.
 
   ```yaml
   gitfs_remotes:
+    - git://github.com/trexglobal/monit-formula
     - git://github.com/trexglobal/lamp-formula
     - git://github.com/trexglobal/apache-formula
     - git://github.com/trexglobal/mysql-formula
@@ -36,3 +37,12 @@ To setup LAMP server.
     'wordpress.blog.example.com':
       - lamp
   ```
+4. You have to disable monit during MySQL import
+
+  ```bash
+  $ monit unmonitor mysql
+  $ mysql < importfile.sql
+  $ monit monitor mysql
+  ```
+
+  Otherwise import will fail on small instances.
