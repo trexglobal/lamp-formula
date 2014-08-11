@@ -6,6 +6,7 @@
 include:
     - apache
     - apache.rewrite
+    - apache.utils
     - mysql.server
     - .mysql
     - php
