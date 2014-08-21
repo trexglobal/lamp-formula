@@ -6,6 +6,7 @@
 include:
     - apache
     - apache.default
+    - apache.vhosts.standard
     - apache.rewrite
     - apache.utils
     - mysql.server
