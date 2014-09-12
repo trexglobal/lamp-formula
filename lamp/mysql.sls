@@ -1,27 +1,6 @@
 include:
     - monit
 
-mysql-server:
-  pkg:
-    - installed
-    - pkgs:
-      - mysql-server
-      - python-mysqldb
-  service:
-    - running
-    - name: mysql
-    - enable: True
-    - require:
-      - pkg: mysql-server
-    - watch:
-      - file: /etc/mysql/my.cnf
-  mysql_user:
-    - present
-    - name: root
-    - password: {{ pillar['mysql']['pass']['root'] }}
-    - require:
-      - service: mysql
-
 /root/.my.cnf:
   file:
     - managed
@@ -30,7 +9,6 @@ mysql-server:
     - group: root
     - mode: 0600
     - template: jinja
-
 
 /etc/monit/conf.d/mysql:
   file:
