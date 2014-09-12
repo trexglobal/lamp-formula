@@ -9,7 +9,7 @@ include:
     - apache.vhosts.standard
     - apache.rewrite
     - apache.utils
-    - mysql.server
+    - mysql
     - .mysql
     - php
     - php.mysql
