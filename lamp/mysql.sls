@@ -4,7 +4,7 @@ include:
 /root/.my.cnf:
   file:
     - managed
-    - source: salt://sfym/files/mysql/root-my.cnf
+    - source: salt://lamp/files/mysql/root-my.cnf
     - user: root
     - group: root
     - mode: 0600
@@ -13,7 +13,7 @@ include:
 /etc/monit/conf.d/mysql:
   file:
     - managed
-    - source: salt://sfym/files/mysql/etc/monit/conf.d/mysql
+    - source: salt://lamp/files/mysql/etc/monit/conf.d/mysql
     - user: root
     - group: root
     - mode: 0444
