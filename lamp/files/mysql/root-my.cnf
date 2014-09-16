@@ -1,2 +1,2 @@
 [client]
-  password = {{ pillar['mysql']['pass']['root'] }}
+  password = {{ pillar['mysql']['server']['root_password'] }}
