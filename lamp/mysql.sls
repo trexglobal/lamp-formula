@@ -10,6 +10,7 @@ include:
     - mode: 0600
     - template: jinja
 
+{% if pillar['monit'] is defined and pillar['monit'] %}
 /etc/monit/conf.d/mysql:
   file:
     - managed
@@ -28,3 +29,4 @@ mysql_monit_restart:
       - file: /etc/monit/conf.d/mysql
     - watch:
       - file: /etc/monit/conf.d/mysql
+{% endif %}
