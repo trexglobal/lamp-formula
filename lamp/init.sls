@@ -4,6 +4,7 @@
 #  https://github.com/trexglobal/mysql-formula
 
 include:
+    - .php-fix
     - apache
     - apache.vhosts.standard
     - apache.rewrite
