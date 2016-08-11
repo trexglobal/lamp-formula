@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo """-----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: SKS 1.1.4
+Version: SKS 1.1.5
 Comment: Hostname: keyserver.ubuntu.com
 
 mI0ESX35nAEEALKDCUDVXvmW9n+T/+3G1DnTpoWh9/1xNaz/RrUH6fQKhHr568F8hfnZP/2C
